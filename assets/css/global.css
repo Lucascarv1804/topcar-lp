@@ -1,0 +1,95 @@
+/* Poppins Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Variables */
+:root {
+    /* colors */
+    --body-bg: #F9FAFB;
+    --brand-color: #1B2532;
+    --btn-secondary-color: #1956A4;
+    --whatsapp-color: #25D366;
+    --waze-color: #33CCFF;
+    --instagram-color: #E1306C;
+    --call-color: #0072C6;
+
+    --border-radius: .5rem;
+
+    /* font-size */
+    --fs-xxs: 10px;
+    --fs-xs: 12px;
+    --fs-sm: 14px;
+    --fs-md: 16px;
+    --fs-lg: 18px;
+    --fs-xl: 24px;
+    --fs-xxl: 32px;
+}
+
+/* Basic Elements */
+body {
+    background-color: var(--body-bg);
+    color: var(--brand-color);
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: var(--fs-xl);
+}
+
+h2 {
+    font-size: var(--fs-lg);
+}
+
+h1,
+h2 {
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-size: var(--fs-xs);
+    text-align: center;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    color: #FFFFFF;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Responsive */
+@media (min-width: 900px) {
+    h1 {
+        font-size: var(--fs-xxl);
+    }
+
+    h2 {
+        font-size: var(--fs-xl);
+    }
+}
