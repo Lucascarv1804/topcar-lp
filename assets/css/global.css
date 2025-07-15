@@ -17,12 +17,14 @@ html {
 :root {
     /* colors */
     --body-bg: #F9FAFB;
-    --brand-color: #1B2532;
+    --brand-color: #1956A4;
+    --brand-color-hover: #1a76b7;
     --btn-secondary-color: #1956A4;
     --whatsapp-color: #25D366;
     --waze-color: #33CCFF;
     --instagram-color: #E1306C;
     --call-color: #0072C6;
+    --surface-glass: rgba(41, 41, 41, 0.3);
 
     --border-radius: .5rem;
 
@@ -66,21 +68,47 @@ a {
     color: inherit;
 }
 
+ul {
+    list-style: none;
+}
+
 button {
+    border: none;
+}
+
+.btn {
     font-size: var(--fs-xs);
     text-align: center;
     cursor: pointer;
     padding: .5rem 1rem;
-    border-radius: var(--border-radius);
     display: inline-block;
     color: #FFFFFF;
+    background-color: var(--brand-color);
+    border-radius: var(--border-radius);
+    border: none;
+    transition: all .3s;
+
+    &:hover {
+        background-color: var(--brand-color-hover);
+    }
 }
 
 .container {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    margin-inline: auto;
+}
+
+#logo {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+/* apenas desktop */
+.desktop-only {
+    display: none;
 }
 
 /* Responsive */
@@ -91,5 +119,14 @@ button {
 
     h2 {
         font-size: var(--fs-xl);
+    }
+
+    #logo {
+        font-size: var(--fs-xl);
+    }
+
+    /* apenas desktop */
+    .desktop-only {
+        display: block;
     }
 }

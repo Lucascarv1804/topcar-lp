@@ -8,16 +8,80 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/index.css">
     <!-- JS -->
-    <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/index.js" type="module" defer></script>
     <!-- Phospor Icons -->
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
+    <!-- diminuir largura do desktop -->
+    <section class="hero-section">
+        <!-- video background -->
+        <video autoplay muted loop playsinline class="hero-bg-video">
+            <source src="assets/videos/hero-bg-video.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo em background
+        </video>
 
+        <!-- header -->
+        <header>
+            <button class="sidebar-btn">
+                <i class="ph ph-list"></i>
+            </button>
+
+            <a href="./index.html" id="logo">
+                TopCar
+            </a>
+
+            <nav class="desktop-only">
+                <ul class="nav-menu">
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="#">Catálogo</a></li>
+                    <li><a href="#reviews">Depoimentos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- futuramente adicionar botao de conta (para admins) -->
+            <div class="header-btns">
+
+                <button class="wpp-btn">
+                    <i class="bi bi-whatsapp"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- sidebar -->
+        <aside class="overlay">
+            <nav class="sidebar">
+                <button class="close-sidebar-btn">
+                    <i class="bi bi-caret-left-square-fill"></i>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="#">Catálogo</a></li>
+                    <li><a href="#reviews">Depoimentos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- hero section -->
+        <div class="hero-content">
+            <h1>Repasse com Qualidade e Transparência</h1>
+            <p>Veículos de procedência com até 40% abaixo da FIPE</p>
+            <input type="text" placeholder="Buscar por marca" />
+            <a href="#" class="btn btn-primary">
+                <i class="ph ph-cube"></i>
+                Catálogo
+            </a>
+        </div>
+    </section>
 </body>
 
 </html>

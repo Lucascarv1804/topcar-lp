@@ -1,0 +1,141 @@
+/* header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    margin: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+    background: var(--surface-glass);
+    backdrop-filter: blur(6px);
+    color: #ffffff;
+}
+
+/* botão de menu toggle */
+.sidebar-btn {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 24px;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* botão do whatsapp */
+.wpp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1rem;
+    background-color: var(--whatsapp-color);
+    color: #ffffff;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* sidebar */
+.sidebar {
+    background: rgba(0, 0, 0, 0.697);
+    padding: 1rem;
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+    width: 70%;
+    height: 100%;
+
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    text-align: center;
+    transform: translateX(-100%);
+    transition: transform .3s ease-in;
+
+    &.active {
+        transform: translateX(0);
+    }
+}
+
+.overlay {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 900;
+    inset: 0;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s ease-in, visibility .3s ease-in;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* close sidebar button */
+.close-sidebar-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+        color: var(--brand-color-hover);
+        transform: scale(1.1);
+    }
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 4rem;
+
+    & a {
+        font-size: 20px;
+        transition: all .3s;
+        display: block;
+
+        &:hover {
+            color: var(--brand-color-hover);
+            transform: scale(1.1);
+        }
+    }
+}
+
+/* responsividade para header */
+@media (min-width: 900px) {
+
+  .sidebar-btn {
+    display: none;
+  }  
+
+  .nav-menu {
+    flex-direction: row;
+    margin-top: 0;
+    
+    & a {
+        font-size: var(--fs-sm);
+    }
+  }
+}
